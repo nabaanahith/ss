@@ -33,7 +33,7 @@ app.use(express.static("./upimg"));
 app.use(express.static("./upfile"));
 //for input form
 app.get('/',(req,res)=>{
-  
+  while(true){
   schema.find({}).then(ressz=>{
     (ressz.map((item,i)=>{
  let r=`${item.datem} ${item.datet} GMT+0300 (Arabic Standard Time)`
@@ -80,7 +80,7 @@ console.log('ok');
        console.log(err);
        
      })
-    
+    }
   }
   else{
     console.log('no');
