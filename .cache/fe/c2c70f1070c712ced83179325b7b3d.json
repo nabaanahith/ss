@@ -1,0 +1,1 @@
+{"id":"a.html","dependencies":[],"generated":{"html":"<form action=\"http://localhost:8000/\" enctype=\"multipart/form-data\" method=\"post\">\r\n\t<input type=\"file\" name=\"img\">\r\n\t<input type=\"submit\"></form>"},"hash":"79d44d5df2b480396f8065fed92b04b5","cacheData":{}}
