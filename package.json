@@ -15,6 +15,7 @@
     "@progress/kendo-dateinputs-react-wrapper": "^2018.3.1017",
     "@progress/kendo-theme-default": "^2.61.0",
     "axios": "^0.18.0",
+    "babel-runtime": "^6.26.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.3",
