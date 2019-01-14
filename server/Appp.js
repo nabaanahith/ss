@@ -9,7 +9,7 @@ const sharp=require('sharp')
 const FileCookieStore = require('tough-cookie-filestore2')
 const fileupload = require("express-fileupload");
 
- mongoose.connect(
+ mongoose.connect(process.env.MONGODB_URL||
    "mongodb://apissss:12345naba54321@ds031867.mlab.com:31867/try",
    { useNewUrlParser: true }
  );
@@ -174,7 +174,7 @@ let f=true;
   }
 })
 
-port =  8000;
+port = process.env.PORT||8000;
 app.listen(port, () =>
   console.log(`the server connect on http://localhost:${port}`)
 );
