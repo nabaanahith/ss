@@ -24557,9 +24557,9 @@ function (_Component) {
       }, _react.default.createElement("a", {
         href: "index.html"
       }, "Home"), _react.default.createElement("a", {
-        href: "generic.html"
+        href: "#"
       }, "sceduild post"), _react.default.createElement("a", {
-        href: "elements.html"
+        href: "#"
       }, "start sceduile"))))))), _react.default.createElement("div", {
         class: "banner-area"
       }, _react.default.createElement("div", {
@@ -24674,13 +24674,10 @@ function (_Component) {
         alt: ""
       })), _react.default.createElement("div", {
         class: "copy-right-text"
-      }, "Copyright \xA9 2019  |  All rights reserved to fikra. This template is made with ", _react.default.createElement("i", {
+      }, "Copyright \xA9 2019  |  All rights reserved to fikra.", _react.default.createElement("i", {
         class: "fa fa-heart-o",
         "aria-hidden": "true"
-      }), " by ", _react.default.createElement("a", {
-        href: "https://colorlib.com",
-        target: "_blank"
-      }, "fikraspace")), _react.default.createElement("div", {
+      })), _react.default.createElement("div", {
         class: "footer-social"
       }, _react.default.createElement("a", {
         href: "#"
@@ -24690,14 +24687,6 @@ function (_Component) {
         href: "#"
       }, _react.default.createElement("i", {
         class: "fa fa-twitter"
-      })), _react.default.createElement("a", {
-        href: "#"
-      }, _react.default.createElement("i", {
-        class: "fa fa-dribbble"
-      })), _react.default.createElement("a", {
-        href: "#"
-      }, _react.default.createElement("i", {
-        class: "fa fa-behance"
       })))))));
     }
   }]);
@@ -24733,7 +24722,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64576" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60080" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -32,21 +32,34 @@ app.use(fileupload());
 app.use(express.static("./upimg"));
 app.use(express.static("./upfile"));
 //for input form
+
 app.get('/',(req,res)=>{
-  while(true){
+  let f=true
+  var interval = setInterval(function() {
+    // execute your request here
   schema.find({}).then(ressz=>{
+   
     (ressz.map((item,i)=>{
+    
  let r=`${item.datem} ${item.datet} GMT+0300 (Arabic Standard Time)`
- console.log(r+'\n'+Date().valueOf());
+
+ let rt=Date().valueOf();
+ console.log(r , '\n',rt);
+ //console.log("itttt",item._id);
  
-if(Date().valueOf()==r){
+ 
+if(rt==r){
+ f=false
 console.log('ok');
 
   const client = new Instagram({ username:item.username, password:item.password ,FileCookieStore})    
      doHomework( alertFinished);
-  
+    
+
      
     function doHomework(callback) {
+      console.log("item.img",item.img);
+      
     //crop img
      sharp(item.img)
       .resize(100,100)
@@ -67,29 +80,52 @@ console.log('ok');
   //    .getProfile()
   //  .then(console.log)
   
-  client.uploadPhoto({photo:'namee.jpg', caption: item.textarea }).then(data=>{//name.jpg always the name of new img 
+  client.uploadPhoto({photo:'namee.jpg', caption: item.texteara }).then(data=>{//name.jpg always the name of new img 
       console.log("data",data);
       
+      schema.remove({ _id:item._id}, function(err) {
+        if (!err) {
+              console.log("item._id)");
+             // res.redirect('http://localhost:8000/');
+           
+              
+        }
+        else {
+                message.type = 'error';
+              
+        }
+    });
     }).catch(e=>{
         console.log("ee1",e);
-      
+     
   
    })
        
      }).catch(err=>{
        console.log(err);
-       
+     
      })
     }
   }
   else{
     console.log('no');
+   // res.redirect('http://localhost:8000')
     
   }
-    }))
-  })
-}
+ 
+
+    })
+    )
+  
+  }
+  )
+ //return
+  
+}, 1000);
+
+
 })
+
 
 //now from post man use this way to post img 
 app.post("/", (req, res) => {
@@ -102,6 +138,8 @@ app.post("/", (req, res) => {
   } else {
 //we the img uploaded his info will returned
     var img = req.files.img;
+    console.log(img);
+    
     var name1 = img.name;
     var bookImgUud = uuidv1();
     const bookImgPath = "./upload" + bookImgUud + name1;//path where i want save img uploaded by user
@@ -115,7 +153,7 @@ password =req.body.password
 let f=true;
   new schema({
 
-    img: req.files.img.data,
+    img:bookImgPath,
     username:req.body.username,
     password :req.body.password,
     datet:req.body.datet,
@@ -144,7 +182,7 @@ app.listen(port, () =>
 function validationSchema(result) {
   var schema = joi.object().keys({
 
-    img: joi.string(),
+   img: joi.object(),
     username:joi.string(),
     password:joi.string(),
     datet:joi.string(),

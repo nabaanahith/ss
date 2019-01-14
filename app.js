@@ -26,8 +26,8 @@ class Formm extends Component {
 									<div class="main-menubar d-flex align-items-center">
 										<nav class="hi\de">
 											<a href="index.html">Home</a>
-											<a href="generic.html">sceduild post</a>
-											<a href="elements.html">start sceduile</a>
+											<a href="#">sceduild post</a>
+											<a href="#">start sceduile</a>
 										</nav>
 									</div>
 								</div>
@@ -116,12 +116,11 @@ class Formm extends Component {
 							<div class="logo">
 								<img src="img/logo.png" alt="" />
 							</div>
-							<div class="copy-right-text">Copyright &copy; 2019  |  All rights reserved to fikra. This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">fikraspace</a></div>
+							<div class="copy-right-text">Copyright &copy; 2019  |  All rights reserved to fikra.<i class="fa fa-heart-o" aria-hidden="true"></i></div>
 							<div class="footer-social">
 								<a href="#"><i class="fa fa-facebook"></i></a>
 								<a href="#"><i class="fa fa-twitter"></i></a>
-								<a href="#"><i class="fa fa-dribbble"></i></a>
-								<a href="#"><i class="fa fa-behance"></i></a>
+							
 							</div>
 						</div>
 					</div>
