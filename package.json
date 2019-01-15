@@ -19,6 +19,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.3",
+    "cors": "^2.8.5",
     "eject": "0.0.4",
     "ejs": "^2.6.1",
     "evergreen-ui": "^4.7.1",

@@ -8,6 +8,8 @@ const Instagram = require('instagram-web-api')
 const sharp=require('sharp')
 const FileCookieStore = require('tough-cookie-filestore2')
 const fileupload = require("express-fileupload");
+var cors = require('cors');
+
 
  mongoose.connect(
    "mongodb://apissss:12345naba54321@ds031867.mlab.com:31867/try",
@@ -24,6 +26,7 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
+app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
